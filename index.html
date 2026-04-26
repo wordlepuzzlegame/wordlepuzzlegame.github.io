@@ -8,7 +8,7 @@
   <meta name="keywords" content="wordle puzzle game, wordle word puzzle, daily wordle puzzle, free wordle puzzle, wordle puzzle online" />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="WordlePuzzle" />
-  <link rel="canonical" href="https://wordlepuzzle.github.io/" />
+  <link rel="canonical" href="https://wordlepuzzlegame.github.io/" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
   <link rel="stylesheet" href="style.css" />
 
@@ -16,7 +16,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Wordle Puzzle – Free Daily Word Puzzle Game Online" />
   <meta property="og:description" content="Play free Wordle puzzle online. Guess the 5-letter word in 6 tries every day!" />
-  <meta property="og:url" content="https://wordlepuzzle.github.io/" />
+  <meta property="og:url" content="https://wordlepuzzlegame.github.io/" />
   <meta property="og:site_name" content="WordlePuzzle" />
 
   <!-- Twitter Card -->
@@ -31,22 +31,22 @@
   "@graph": [
     {
       "@type": "WebSite",
-      "@id": "https://wordlepuzzle.github.io/#website",
-      "url": "https://wordlepuzzle.github.io/",
+      "@id": "https://wordlepuzzlegame.github.io/#website",
+      "url": "https://wordlepuzzlegame.github.io/",
       "name": "WordlePuzzle",
       "description": "Free daily Wordle word puzzle game online",
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://wordlepuzzle.github.io/?s={search_term_string}",
+        "target": "https://wordlepuzzlegame.github.io/?s={search_term_string}",
         "query-input": "required name=search_term_string"
       }
     },
     {
       "@type": "WebApplication",
-      "@id": "https://wordlepuzzle.github.io/#game",
+      "@id": "https://wordlepuzzlegame.github.io/#game",
       "name": "Wordle Puzzle",
       "description": "A free daily word-guessing puzzle game. Guess the 5-letter word in 6 attempts.",
-      "url": "https://wordlepuzzle.github.io/",
+      "url": "https://wordlepuzzlegame.github.io/",
       "applicationCategory": "Game",
       "genre": "Word Game",
       "operatingSystem": "Any",
@@ -59,7 +59,7 @@
     },
     {
       "@type": "FAQPage",
-      "@id": "https://wordlepuzzle.github.io/#faq",
+      "@id": "https://wordlepuzzlegame.github.io/#faq",
       "mainEntity": [
         {
           "@type": "Question",
@@ -523,7 +523,7 @@
           <span class="faq-q-text">Is the Wordle Puzzle free to play?</span>
           <span class="faq-icon">+</span>
         </div>
-        <div class="faq-answer">Yes! Our wordle puzzle is completely free to play, forever. There are no subscriptions, no in-app purchases, and no hidden fees. The free wordle puzzle online at wordlepuzzle.github.io will always remain free for everyone to enjoy.</div>
+        <div class="faq-answer">Yes! Our wordle puzzle is completely free to play, forever. There are no subscriptions, no in-app purchases, and no hidden fees. The free wordle puzzle online at wordlepuzzlegame.github.io will always remain free for everyone to enjoy.</div>
       </div>
       <div class="faq-item">
         <div class="faq-question" onclick="toggleFaq(this)">
@@ -859,7 +859,7 @@
       const r = evaluateGuess(g, targetWord);
       text += r.map(x => emojis[x]).join('') + '\n';
     });
-    text += '\nhttps://wordlepuzzle.github.io/';
+    text += '\nhttps://wordlepuzzlegame.github.io/';
     if (navigator.clipboard) {
       navigator.clipboard.writeText(text).then(() => {
         setMessage('📋 Results copied to clipboard!');
