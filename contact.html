@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us – WordlePuzzle</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    :root {
+      --bg: #fef9f0; --surface: #ffffff; --text: #1a1a2e;
+      --accent1: #4f86f7; --border: #e2e8f0; --font-display: 'Fredoka One', cursive;
+      --font-body: 'Nunito', sans-serif;
+    }
+    body { font-family: var(--font-body); background: var(--bg); color: var(--text); margin: 0; padding: 20px; }
+    .container { max-width: 600px; margin: 80px auto; padding: 40px; background: var(--surface); border-radius: 16px; border: 2px solid var(--border); text-align: center; }
+    h1 { font-family: var(--font-display); color: var(--accent1); }
+    .contact-info { margin: 30px 0; padding: 20px; background: #f8fafc; border-radius: 12px; }
+    .email-link { color: var(--accent1); font-weight: 700; text-decoration: none; font-size: 1.2rem; }
+    .email-link:hover { text-decoration: underline; }
+    .btn-back { display: inline-block; margin-bottom: 20px; color: var(--accent1); text-decoration: none; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <!-- ===== HEADER COMPONENT ===== -->
+<header id="site-header"></header>
+  <div class="container">
+    <a href="index.html" class="btn-back">← Back to Game</a>
+    <h1>Get in Touch</h1>
+    <p>Have questions, feedback, or a technical issue to report? We would love to hear from you.</p>
+    
+    <div class="contact-info">
+      <p>Reach out to the developer directly at:</p>
+      <a href="mailto:nolushac@gmail.com" class="email-link">nolushac@gmail.com</a>
+    </div>
+    
+    <p>I aim to respond to all inquiries within 48 hours. Thank you for supporting WordlePuzzle!</p>
+  </div>
+  <!-- ===== FOOTER COMPONENT ===== -->
+<footer id="site-footer"></footer>
+
+  <script src="header.js"></script>
+  <script src="footer.js"></script>
+</body>
+</html>
