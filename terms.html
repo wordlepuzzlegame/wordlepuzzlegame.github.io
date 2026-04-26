@@ -8,189 +8,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;500;600;700;800&family=Baloo+2:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+  <link rel="stylesheet" href="style.css" />
   <style>
-
-     /* ===== HEADER COMPONENT ===== */
-    #site-header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(255,255,255,0.95);
-      backdrop-filter: blur(12px);
-      border-bottom: 2px solid var(--border);
-      box-shadow: 0 2px 16px rgba(79,134,247,0.08);
-    }
-    .header-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-      height: 70px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-family: var(--font-display);
-      font-size: 1.75rem;
-      color: var(--text);
-      letter-spacing: 0.5px;
-    }
-    .logo-tiles {
-      display: flex;
-      gap: 3px;
-    }
-    .logo-tile {
-      width: 26px; height: 26px;
-      border-radius: 5px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-display);
-      font-size: 0.85rem;
-      color: white;
-      font-weight: bold;
-    }
-    .lt-g { background: var(--green); }
-    .lt-y { background: var(--yellow); }
-    .lt-b { background: var(--accent1); }
-
-    nav ul {
-      display: flex;
-      gap: 8px;
-      align-items: center;
-    }
-    nav a {
-      font-family: var(--font-heading);
-      font-weight: 600;
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      padding: 8px 16px;
-      border-radius: 30px;
-      transition: all 0.2s;
-    }
-    nav a:hover { background: var(--surface2); color: var(--accent1); }
-    .nav-cta {
-      background: var(--accent1) !important;
-      color: white !important;
-      font-weight: 700 !important;
-    }
-    .nav-cta:hover { background: #3a6fd8 !important; transform: translateY(-1px); box-shadow: var(--shadow); }
-
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      padding: 5px;
-      background: none;
-      border: none;
-    }
-    .hamburger span {
-      display: block; width: 26px; height: 3px;
-      background: var(--text);
-      border-radius: 3px;
-      transition: all 0.3s;
-    }
-
-     /* ===== FOOTER ===== */
-    #site-footer {
-      background: #1a1a2e;
-      color: rgba(255,255,255,0.75);
-      padding: 60px 24px 30px;
-    }
-    .footer-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1fr;
-      gap: 40px;
-      margin-bottom: 48px;
-    }
-    .footer-brand .logo {
-      color: white;
-      margin-bottom: 14px;
-    }
-    .footer-brand p {
-      font-size: 0.9rem;
-      line-height: 1.8;
-      color: rgba(255,255,255,0.6);
-    }
-    .footer-col h4 {
-      font-family: var(--font-heading);
-      font-size: 0.9rem;
-      font-weight: 800;
-      color: white;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      margin-bottom: 18px;
-    }
-    .footer-col ul li { margin-bottom: 10px; }
-    .footer-col ul li a {
-      font-size: 0.9rem;
-      color: rgba(255,255,255,0.6);
-      transition: color 0.2s;
-    }
-    .footer-col ul li a:hover { color: var(--accent3); }
-    .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,0.1);
-      padding-top: 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-    .footer-bottom p { font-size: 0.85rem; color: rgba(255,255,255,0.45); }
-    .footer-badges {
-      display: flex;
-      gap: 10px;
-    }
-    .footer-badge {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 20px;
-      padding: 5px 14px;
-      font-size: 0.78rem;
-      color: rgba(255,255,255,0.55);
-    }
-
-    /* ===== MOBILE NAV ===== */
-    @media (max-width: 768px) {
-      .hamburger { display: flex; }
-      nav { display: none; }
-      nav.open {
-        display: block;
-        position: absolute;
-        top: 70px; left: 0; right: 0;
-        background: white;
-        border-bottom: 2px solid var(--border);
-        padding: 16px 24px;
-        z-index: 999;
-      }
-      nav.open ul { flex-direction: column; gap: 4px; }
-      nav.open a { display: block; width: 100%; }
-      #site-header { position: sticky; }
-
-      .hero-inner { grid-template-columns: 1fr; }
-      .hero-game-preview { display: none; }
-      .hero-stats { gap: 20px; }
-      .steps-grid { grid-template-columns: 1fr; }
-      .features-grid { grid-template-columns: 1fr; }
-      .about-grid { grid-template-columns: 1fr; }
-      .about-visual { display: none; }
-      .tips-grid { grid-template-columns: 1fr; }
-      .edu-grid { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
-      .preview-cell { width: 46px; height: 46px; font-size: 1.3rem; }
-      .game-tile { width: 50px; height: 50px; font-size: 1.4rem; }
-      .key { min-width: 32px; height: 48px; font-size: 0.8rem; }
-      .key.wide { min-width: 46px; }
-    }
     /* Using variables from index.html */
     :root {
       --green: #6aaa64; --yellow: #c9b458; --gray: #787c7e; --light-gray: #d3d6da;
@@ -208,6 +28,8 @@
   </style>
 </head>
 <body>
+  <!-- ===== HEADER COMPONENT ===== -->
+<header id="site-header"></header>
   <div class="content-wrapper">
     <a href="index.html" class="btn-back">← Back to Game</a>
     <h1>Terms of Use</h1>
@@ -238,10 +60,10 @@
     <h2>6. Variations of Terms</h2>
     <p>WordlePuzzle is permitted to revise these terms at any time as it sees fit, and by using this website you are expected to review these terms on a regular basis.</p>
   </div>
-</body>
   <!-- ===== FOOTER COMPONENT ===== -->
 <footer id="site-footer"></footer>
 
   <script src="header.js"></script>
   <script src="footer.js"></script>
+</body>
 </html>
