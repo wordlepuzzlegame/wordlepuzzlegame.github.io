@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wordle Puzzle – Free Daily Word Puzzle Game Online</title>
+  <meta name="description" content="Play the best free Wordle puzzle online! Guess the 5-letter word in 6 tries. A daily word puzzle game for everyone – fun, educational, and totally free." />
+  <meta name="keywords" content="wordle puzzle game, wordle word puzzle, daily wordle puzzle, free wordle puzzle, wordle puzzle online" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="WordlePuzzle" />
+  <link rel="canonical" href="https://wordlepuzzle.github.io/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Wordle Puzzle – Free Daily Word Puzzle Game Online" />
+  <meta property="og:description" content="Play free Wordle puzzle online. Guess the 5-letter word in 6 tries every day!" />
+  <meta property="og:url" content="https://wordlepuzzle.github.io/" />
+  <meta property="og:site_name" content="WordlePuzzle" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Wordle Puzzle – Free Daily Word Puzzle Game" />
+  <meta name="twitter:description" content="Play the free daily Wordle word puzzle online. Fun, educational, and addictive!" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://wordlepuzzle.github.io/#website",
+        "url": "https://wordlepuzzle.github.io/",
+        "name": "WordlePuzzle",
+        "description": "Free daily Wordle word puzzle game online",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://wordlepuzzle.github.io/?s={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "Game",
+        "@id": "https://wordlepuzzle.github.io/#game",
+        "name": "Wordle Puzzle",
+        "description": "A free daily word-guessing puzzle game. Guess the 5-letter word in 6 attempts.",
+        "url": "https://wordlepuzzle.github.io/",
+        "genre": ["Word Game", "Puzzle", "Educational"],
+        "playMode": "SinglePlayer",
+        "applicationCategory": "Game",
+        "operatingSystem": "Any",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://wordlepuzzle.github.io/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is Wordle Puzzle?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Wordle Puzzle is a free daily word game where you guess a 5-letter word in 6 tries, with color-coded hints after each guess."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I play Wordle Puzzle?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Type a 5-letter word and press Enter. Green means correct letter and position, yellow means correct letter wrong position, gray means the letter is not in the word."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Wordle Puzzle free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, Wordle Puzzle is completely free to play online, with no downloads or sign-ups required."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;500;600;700;800&family=Baloo+2:wght@400;600;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- ===== HEADER COMPONENT ===== -->
+<header id="site-header"></header>
+
+<!-- ===== CONFETTI CONTAINER ===== -->
+<div class="confetti-container" id="confetti-container"></div>
+
+<!-- ===== HERO ===== -->
+<section id="hero" aria-label="Hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">Free Daily Word Game Online</div>
+      <h1 class="hero-title">
+        Play the Best <span class="highlight-g">Wordle</span><br>
+        <span class="highlight-b">Puzzle</span> Game Free
+      </h1>
+      <p class="hero-desc">
+        Guess the hidden 5-letter word in 6 tries. A daily wordle puzzle that sharpens your vocabulary, challenges your mind, and keeps you coming back every day — completely free!
+      </p>
+      <div class="hero-btns">
+        <button class="btn-primary" onclick="document.getElementById('play-game').scrollIntoView({behavior:'smooth'})">▶ Play Now — Free</button>
+        <button class="btn-secondary" onclick="document.getElementById('how-to-play').scrollIntoView({behavior:'smooth'})">📖 How to Play</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num">5M+</span>
+          <span class="stat-label">Daily Players</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">365</span>
+          <span class="stat-label">Days of Puzzles</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">Free</span>
+          <span class="stat-label">Always</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-game-preview fade-in-up fade-delay-2">
+      <div class="preview-label">Today's Wordle Puzzle</div>
+      <div class="preview-grid">
+        <div class="preview-row">
+          <div class="preview-cell pc-gray">C</div>
+          <div class="preview-cell pc-yellow">R</div>
+          <div class="preview-cell pc-gray">A</div>
+          <div class="preview-cell pc-gray">N</div>
+          <div class="preview-cell pc-gray">E</div>
+        </div>
+        <div class="preview-row">
+          <div class="preview-cell pc-gray">S</div>
+          <div class="preview-cell pc-green">R</div>
+          <div class="preview-cell pc-yellow">I</div>
+          <div class="preview-cell pc-gray">F</div>
+          <div class="preview-cell pc-yellow">T</div>
+        </div>
+        <div class="preview-row">
+          <div class="preview-cell pc-green">B</div>
+          <div class="preview-cell pc-green">R</div>
+          <div class="preview-cell pc-green">I</div>
+          <div class="preview-cell pc-green">G</div>
+          <div class="preview-cell pc-green">H</div>
+        </div>
+        <div class="preview-row">
+          <div class="preview-cell pc-empty"></div>
+          <div class="preview-cell pc-empty"></div>
+          <div class="preview-cell pc-empty"></div>
+          <div class="preview-cell pc-empty"></div>
+          <div class="preview-cell pc-empty"></div>
+        </div>
+        <div class="preview-row">
+          <div class="preview-cell pc-empty"></div>
+          <div class="preview-cell pc-empty"></div>
+          <div class="preview-cell pc-empty"></div>
+          <div class="preview-cell pc-empty"></div>
+          <div class="preview-cell pc-empty"></div>
+        </div>
+        <div class="preview-row">
+          <div class="preview-cell pc-empty"></div>
+          <div class="preview-cell pc-empty"></div>
+          <div class="preview-cell pc-empty"></div>
+          <div class="preview-cell pc-empty"></div>
+          <div class="preview-cell pc-empty"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW TO PLAY ===== -->
+<section id="how-to-play" aria-label="How to Play">
+  <div class="section-inner">
+    <div class="text-center">
+      <span class="section-tag">Game Rules</span>
+      <h2 class="section-title">How to Play the Wordle Puzzle</h2>
+      <p class="section-desc">The wordle word puzzle is simple to learn but endlessly satisfying. Here's everything you need to know to get started:</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card fade-in-up">
+        <div class="step-number">1</div>
+        <div class="step-icon">⌨️</div>
+        <h3 class="step-title">Type Your First Word</h3>
+        <p class="step-desc">Choose any valid 5-letter English word as your opening guess. Use the on-screen keyboard or your physical keyboard to enter your word.</p>
+      </div>
+      <div class="step-card fade-in-up fade-delay-1">
+        <div class="step-number">2</div>
+        <div class="step-icon">🎨</div>
+        <h3 class="step-title">Read the Color Hints</h3>
+        <p class="step-desc">After each guess, tiles reveal colored clues: green, yellow, or gray. Each color tells you something different about your guessed letters.</p>
+      </div>
+      <div class="step-card fade-in-up fade-delay-2">
+        <div class="step-number">3</div>
+        <div class="step-icon">🧠</div>
+        <h3 class="step-title">Deduce & Solve</h3>
+        <p class="step-desc">Use the color hints to refine your next guesses. You have 6 total attempts to crack the daily wordle puzzle. Think logically and use word patterns!</p>
+      </div>
+    </div>
+
+    <div class="color-legend">
+      <div class="legend-item">
+        <div class="legend-tile" style="background:var(--green)">W</div>
+        <div class="legend-text">
+          <strong>Green Tile</strong>
+          <span>Letter is in the correct position</span>
+        </div>
+      </div>
+      <div class="legend-item">
+        <div class="legend-tile" style="background:var(--yellow)">O</div>
+        <div class="legend-text">
+          <strong>Yellow Tile</strong>
+          <span>Letter is in the word, wrong spot</span>
+        </div>
+      </div>
+      <div class="legend-item">
+        <div class="legend-tile" style="background:var(--gray)">R</div>
+        <div class="legend-text">
+          <strong>Gray Tile</strong>
+          <span>Letter is not in the word at all</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LIVE GAME SECTION ===== -->
+<section id="play-game" aria-label="Play Wordle Puzzle">
+  <div class="section-inner text-center">
+    <span class="section-tag">Play Free Now</span>
+    <h2 class="section-title">Free Wordle Puzzle Online</h2>
+    <p class="section-desc" style="margin-bottom:32px;">A fresh daily wordle puzzle awaits! Guess the 5-letter word in 6 tries. Good luck!</p>
+    <div class="game-container">
+      <div class="game-header">
+        <div class="game-info">
+          <div class="game-stat">
+            <div class="game-stat-num" id="stat-played">0</div>
+            <div class="game-stat-label">Played</div>
+          </div>
+          <div class="game-stat">
+            <div class="game-stat-num" id="stat-wins">0</div>
+            <div class="game-stat-label">Wins</div>
+          </div>
+          <div class="game-stat">
+            <div class="game-stat-num" id="stat-streak">0</div>
+            <div class="game-stat-label">Streak 🔥</div>
+          </div>
+        </div>
+        <div>
+          <button class="btn-game outline" onclick="shareResult()">📤 Share</button>
+        </div>
+      </div>
+      <div class="game-message" id="game-message"></div>
+      <div class="game-board" id="game-board"></div>
+      <div class="keyboard" id="keyboard"></div>
+      <div class="game-actions">
+        <button class="btn-game" onclick="newGame()">🔄 New Game</button>
+        <button class="btn-game outline" onclick="showHint()">💡 Hint</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURES SECTION ===== -->
+<section id="features" aria-label="Features">
+  <div class="section-inner">
+    <div class="text-center">
+      <span class="section-tag">Why Choose Us</span>
+      <h2 class="section-title">Everything in One Wordle Puzzle Game</h2>
+      <p class="section-desc">Our free wordle puzzle online packs all the features that make daily word games genuinely enjoyable and educational.</p>
+    </div>
+    <div class="features-grid" style="margin-top:0">
+      <div class="feature-card fade-in-up" style="--card-accent:#4f86f7;--icon-bg:#e8f4ff">
+        <div class="feature-icon">🗓️</div>
+        <h3 class="feature-title">New Daily Puzzle</h3>
+        <p class="feature-desc">A brand-new wordle word puzzle drops every single day. No repeats, always fresh — your daily brain workout is guaranteed.</p>
+      </div>
+      <div class="feature-card fade-in-up fade-delay-1" style="--card-accent:#6aaa64;--icon-bg:#e8ffe8">
+        <div class="feature-icon">📱</div>
+        <h3 class="feature-title">Play on Any Device</h3>
+        <p class="feature-desc">Fully mobile-compatible wordle puzzle game. Play on your phone, tablet, laptop, or desktop without installing anything.</p>
+      </div>
+      <div class="feature-card fade-in-up fade-delay-2" style="--card-accent:#c9b458;--icon-bg:#fff8e0">
+        <div class="feature-icon">🎯</div>
+        <h3 class="feature-title">Smart Hint System</h3>
+        <p class="feature-desc">Stuck on a guess? Our subtle hint system nudges you forward without spoiling the fun of the daily wordle puzzle.</p>
+      </div>
+      <div class="feature-card fade-in-up fade-delay-1" style="--card-accent:#f76f6f;--icon-bg:#ffe8e8">
+        <div class="feature-icon">📊</div>
+        <h3 class="feature-title">Track Your Progress</h3>
+        <p class="feature-desc">Monitor your win rate, current streak, and game history. See how your vocabulary and strategy improve over time.</p>
+      </div>
+      <div class="feature-card fade-in-up fade-delay-2" style="--card-accent:#c084fc;--icon-bg:#f5e8ff">
+        <div class="feature-icon">📤</div>
+        <h3 class="feature-title">Easy Social Sharing</h3>
+        <p class="feature-desc">Share your wordle puzzle results with friends using the classic emoji grid — spoiler-free and always satisfying.</p>
+      </div>
+      <div class="feature-card fade-in-up fade-delay-3" style="--card-accent:#4f86f7;--icon-bg:#e8f4ff">
+        <div class="feature-icon">🆓</div>
+        <h3 class="feature-title">100% Free Forever</h3>
+        <p class="feature-desc">No subscriptions, no hidden fees, no ads interrupting your game. Our free wordle puzzle will always be completely free.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT WORDLE ===== -->
+<section id="about-wordle" aria-label="About Wordle Puzzle">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-text fade-in-up">
+        <span class="section-tag">About the Game</span>
+        <h2>What Is the Wordle Puzzle Game?</h2>
+        <p>The <strong>wordle puzzle game</strong> is a daily word-guessing challenge that took the world by storm. Each day, players get six chances to guess a secret five-letter word, using color-coded feedback to zero in on the answer.</p>
+        <p>What makes the <strong>wordle word puzzle</strong> so special is its perfect balance: simple enough for beginners, yet challenging enough to satisfy seasoned word game enthusiasts. It's a mental workout disguised as pure fun.</p>
+        <p>Whether you're playing the <strong>free wordle puzzle online</strong> on your lunch break or as part of your morning routine, it's a habit that genuinely pays off — improving vocabulary, pattern recognition, and logical deduction skills.</p>
+        <div class="about-highlights">
+          <div class="highlight-item">
+            <div class="highlight-icon">🌍</div>
+            <div class="highlight-text">
+              <strong>Played Worldwide</strong>
+              <span>Millions of daily active wordle puzzle players globally</span>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">📚</div>
+            <div class="highlight-text">
+              <strong>Educational Value</strong>
+              <span>Builds English vocabulary and spelling skills naturally</span>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">⏱️</div>
+            <div class="highlight-text">
+              <strong>5 Mins a Day</strong>
+              <span>Quick enough for busy people, deep enough to be satisfying</span>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">🧩</div>
+            <div class="highlight-text">
+              <strong>Puzzle Logic</strong>
+              <span>Combines vocabulary with deductive reasoning skills</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-visual fade-in-up fade-delay-2">
+        <div class="big-tile-row">
+          <div class="big-tile bt-g">W</div>
+          <div class="big-tile bt-g">O</div>
+          <div class="big-tile bt-g">R</div>
+          <div class="big-tile bt-g">D</div>
+          <div class="big-tile bt-g">S</div>
+        </div>
+        <div class="big-tile-row">
+          <div class="big-tile bt-y">P</div>
+          <div class="big-tile bt-b">L</div>
+          <div class="big-tile bt-g">A</div>
+          <div class="big-tile bt-gr">Y</div>
+          <div class="big-tile bt-y">S</div>
+        </div>
+        <div class="big-tile-row">
+          <div class="big-tile bt-b">T</div>
+          <div class="big-tile bt-g">H</div>
+          <div class="big-tile bt-p">I</div>
+          <div class="big-tile bt-y">N</div>
+          <div class="big-tile bt-g">K</div>
+        </div>
+        <div class="big-tile-row">
+          <div class="big-tile bt-e">?</div>
+          <div class="big-tile bt-e">?</div>
+          <div class="big-tile bt-e">?</div>
+          <div class="big-tile bt-e">?</div>
+          <div class="big-tile bt-e">?</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TIPS SECTION ===== -->
+<section id="tips" aria-label="Tips and Strategies">
+  <div class="section-inner">
+    <div class="text-center">
+      <span class="section-tag">Pro Strategies</span>
+      <h2 class="section-title">Expert Tips for the Daily Wordle Puzzle</h2>
+      <p class="section-desc">Level up your wordle puzzle game with these strategic tips used by top players around the world.</p>
+    </div>
+    <div class="tips-grid" style="margin-top:40px">
+      <div class="tip-card fade-in-up">
+        <div class="tip-num">1</div>
+        <div class="tip-body">
+          <h4>Start with Vowel-Rich Words</h4>
+          <p>Open your wordle word puzzle with words containing multiple vowels like AUDIO, RAISE, STARE, or CRANE. Covering 2–3 vowels in your first guess dramatically narrows the solution space.</p>
+        </div>
+      </div>
+      <div class="tip-card fade-in-up fade-delay-1">
+        <div class="tip-num">2</div>
+        <div class="tip-body">
+          <h4>Maximize Letter Coverage Early</h4>
+          <p>Use your first two guesses to test as many distinct letters as possible. Avoid reusing letters from a previous guess in the same position where they showed gray.</p>
+        </div>
+      </div>
+      <div class="tip-card fade-in-up fade-delay-2">
+        <div class="tip-num">3</div>
+        <div class="tip-body">
+          <h4>Think in Word Patterns</h4>
+          <p>English words follow predictable patterns. Common endings like -TION, -IGHT, -OULD and common beginnings like ST-, TR-, CH- can help you fill in missing letters faster in the daily wordle puzzle.</p>
+        </div>
+      </div>
+      <div class="tip-card fade-in-up fade-delay-3">
+        <div class="tip-num">4</div>
+        <div class="tip-body">
+          <h4>Use Yellow Letters Wisely</h4>
+          <p>Yellow means the letter exists in the word — just not there. Move yellow letters to different positions in your next guess. Don't ignore them, and don't guess them in the same spot again.</p>
+        </div>
+      </div>
+      <div class="tip-card fade-in-up">
+        <div class="tip-num">5</div>
+        <div class="tip-body">
+          <h4>Eliminate Common Traps</h4>
+          <p>Beware of doubled letters (like LLAMA or TEETH) — they can trip up your deductions. Pay attention to whether a letter appears once or might repeat in the free wordle puzzle online solution.</p>
+        </div>
+      </div>
+      <div class="tip-card fade-in-up fade-delay-1">
+        <div class="tip-num">6</div>
+        <div class="tip-body">
+          <h4>Build a Consistent Opener</h4>
+          <p>Many wordle puzzle pros use the same opening word every day — it removes decision fatigue and helps you track improvement. Popular starters: SLATE, CRANE, TRACE, STARE, or ADIEU.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EDUCATIONAL SECTION ===== -->
+<section id="educational" aria-label="Educational Benefits">
+  <div class="section-inner">
+    <div class="text-center">
+      <span class="section-tag">Learning Benefits</span>
+      <h2 class="section-title">Why Wordle Puzzle is More Than Just a Game</h2>
+      <p class="section-desc">The daily wordle puzzle isn't only entertaining — it delivers genuine cognitive and educational benefits backed by research.</p>
+    </div>
+    <div class="edu-grid" style="margin-top:40px">
+      <div class="edu-card fade-in-up">
+        <div class="edu-icon">📖</div>
+        <h3 class="edu-title">Vocabulary Expansion</h3>
+        <p class="edu-desc">Regular play with the wordle word puzzle naturally introduces new words and reinforces spelling patterns, expanding your English vocabulary week by week without feeling like studying.</p>
+      </div>
+      <div class="edu-card fade-in-up fade-delay-1">
+        <div class="edu-icon">🧠</div>
+        <h3 class="edu-title">Cognitive Sharpness</h3>
+        <p class="edu-desc">Solving the daily wordle puzzle exercises working memory, deductive reasoning, and pattern recognition — the same cognitive skills used in critical thinking and problem solving.</p>
+      </div>
+      <div class="edu-card fade-in-up fade-delay-2">
+        <div class="edu-icon">🎓</div>
+        <h3 class="edu-title">Great for Students</h3>
+        <p class="edu-desc">Teachers use wordle puzzle games as a classroom warm-up tool. The free wordle puzzle online format makes it accessible for learners of all ages to build English language skills.</p>
+      </div>
+      <div class="edu-card fade-in-up">
+        <div class="edu-icon">🔄</div>
+        <h3 class="edu-title">Builds Daily Habits</h3>
+        <p class="edu-desc">The one-puzzle-per-day format of our wordle puzzle game makes it easy to form a sustainable daily learning habit — without the overwhelm of longer educational apps.</p>
+      </div>
+      <div class="edu-card fade-in-up fade-delay-1">
+        <div class="edu-icon">👨‍👩‍👧</div>
+        <h3 class="edu-title">Family-Friendly Fun</h3>
+        <p class="edu-desc">From kids to grandparents, the wordle puzzle online bridges generations. Share your results, compare strategies, and make vocabulary building a family activity.</p>
+      </div>
+      <div class="edu-card fade-in-up fade-delay-2">
+        <div class="edu-icon">💪</div>
+        <h3 class="edu-title">Mental Resilience</h3>
+        <p class="edu-desc">Working through a tough daily wordle puzzle teaches persistence and graceful failure — essential skills beyond the game. Each miss is a clue, not a defeat.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ SECTION ===== -->
+<section id="faq" aria-label="Frequently Asked Questions">
+  <div class="section-inner">
+    <div class="text-center">
+      <span class="section-tag">FAQ</span>
+      <h2 class="section-title">Wordle Puzzle Questions Answered</h2>
+      <p class="section-desc">Everything you need to know about the free wordle puzzle online.</p>
+    </div>
+    <div class="faq-grid" style="margin-top:40px">
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-q-text">What is the Wordle Puzzle game?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">The wordle puzzle game is a free daily word-guessing challenge where players try to identify a secret 5-letter English word in exactly 6 attempts. After each guess, color-coded tiles provide feedback: green for correct letter and position, yellow for correct letter but wrong position, and gray for letters not in the word at all.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-q-text">How do I play the daily Wordle puzzle online?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">Playing the free wordle puzzle online is simple! Just type a valid 5-letter word using your keyboard or the on-screen keyboard and press Enter. The tiles will then change color to give you hints. Use those hints to make smarter guesses. You have 6 tries to guess the correct word — good luck!</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Is the Wordle Puzzle free to play?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">Yes! Our wordle puzzle is completely free to play, forever. There are no subscriptions, no in-app purchases, and no hidden fees. The free wordle puzzle online at wordlepuzzle.github.io will always remain free for everyone to enjoy.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-q-text">How often does a new Wordle word puzzle come out?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">A brand-new wordle word puzzle is released every single day. You can play a fresh daily wordle puzzle at any time — on weekdays, weekends, and holidays. Once you complete today's puzzle, you can click "New Game" to challenge yourself with another randomly selected word.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Can I play Wordle Puzzle on my phone?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">Absolutely! Our wordle puzzle game is fully optimized for mobile devices. You can play the free wordle puzzle online on any smartphone or tablet through your browser — no app download or installation required. The on-screen keyboard works perfectly on touch screens.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-q-text">What are the best starting words for Wordle?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">The best starting words for the wordle puzzle contain common letters and cover multiple vowels. Top choices include: CRANE, STARE, RAISE, SLATE, TRACE, and ADIEU. These words help you eliminate or confirm many letters in your very first guess, giving you a strong foundation for the rest of the daily wordle puzzle.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Does the Wordle Puzzle save my statistics?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">Yes! Your wordle puzzle statistics including games played, wins, and current streak are saved locally in your browser. As long as you play on the same device and browser, your stats will persist across sessions so you can track your progress over time.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Is there a Wordle Puzzle for kids?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">Our wordle word puzzle is family-friendly and suitable for players of all ages. The vocabulary used in our free wordle puzzle online is carefully curated to include common English words, making it accessible for older kids, teenagers, and adults. It's a great educational tool for classrooms and family game time alike.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA SECTION ===== -->
+<section id="cta" aria-label="Call to Action">
+  <h2 class="cta-title">Ready to Solve Today's<br>Wordle Puzzle?</h2>
+  <p class="cta-desc">Join millions of players enjoying the free daily wordle puzzle online. No sign-up needed — just play!</p>
+  <button class="btn-cta" onclick="document.getElementById('play-game').scrollIntoView({behavior:'smooth'})">
+    🎮 Play Free Wordle Now
+  </button>
+  <div class="cta-tiles">
+    <div class="cta-tile">W</div>
+    <div class="cta-tile">O</div>
+    <div class="cta-tile">R</div>
+    <div class="cta-tile">D</div>
+    <div class="cta-tile">S</div>
+  </div>
+</section>
+
+<!-- ===== FOOTER COMPONENT ===== -->
+<footer id="site-footer"></footer>
+
+<!-- ===== HEADER JS COMPONENT ===== -->
+<script>
+(function buildHeader() {
+  const header = document.getElementById('site-header');
+  header.innerHTML = `
+    <div class="header-inner">
+      <a href="/" class="logo" aria-label="WordlePuzzle Home">
+        <div class="logo-tiles">
+          <div class="logo-tile lt-g">W</div>
+          <div class="logo-tile lt-y">P</div>
+          <div class="logo-tile lt-b">Z</div>
+        </div>
+        WordlePuzzle
+      </a>
+      <nav id="main-nav" role="navigation" aria-label="Main Navigation">
+        <ul>
+          <li><a href="#how-to-play">How to Play</a></li>
+          <li><a href="#about-wordle">About</a></li>
+          <li><a href="#tips">Tips</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#play-game" class="nav-cta">Play Free ▶</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  `;
+
+  // Smooth nav links
+  header.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth' });
+      const nav = document.getElementById('main-nav');
+      if (nav.classList.contains('open')) nav.classList.remove('open');
+    });
+  });
+
+  // Hamburger
+  document.getElementById('hamburger').addEventListener('click', function() {
+    const nav = document.getElementById('main-nav');
+    nav.classList.toggle('open');
+    this.setAttribute('aria-expanded', nav.classList.contains('open'));
+  });
+})();
+</script>
+
+<!-- ===== FOOTER JS COMPONENT ===== -->
+<script>
+(function buildFooter() {
+  const footer = document.getElementById('site-footer');
+  footer.innerHTML = `
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="WordlePuzzle">
+            <div class="logo-tiles">
+              <div class="logo-tile lt-g">W</div>
+              <div class="logo-tile lt-y">P</div>
+              <div class="logo-tile lt-b">Z</div>
+            </div>
+            WordlePuzzle
+          </a>
+          <p>The best free daily wordle puzzle game online. Guess the 5-letter word in 6 tries, every single day — completely free, no sign-up needed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Play</h4>
+          <ul>
+            <li><a href="#play-game">Daily Wordle Puzzle</a></li>
+            <li><a href="#play-game">Free Wordle Online</a></li>
+            <li><a href="#how-to-play">Wordle Rules</a></li>
+            <li><a href="#tips">Wordle Tips</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Learn</h4>
+          <ul>
+            <li><a href="#how-to-play">How to Play</a></li>
+            <li><a href="#about-wordle">About Wordle</a></li>
+            <li><a href="#educational">Benefits</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>About</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© ${new Date().getFullYear()} WordlePuzzle.github.io — Free Daily Wordle Puzzle Game Online. All rights reserved.</p>
+        <div class="footer-badges">
+          <span class="footer-badge">🆓 Free to Play</span>
+          <span class="footer-badge">📱 Mobile Ready</span>
+          <span class="footer-badge">🎓 Educational</span>
+        </div>
+      </div>
+    </div>
+  `;
+})();
+</script>
+
+<!-- ===== GAME ENGINE ===== -->
+<script>
+(function WordleGame() {
+  // Word list — 100 common 5-letter words
+  const WORDS = [
+    'ABOUT','ABOVE','ABUSE','ACTOR','ACUTE','ADMIT','ADOPT','ADULT','AFTER','AGAIN',
+    'AGENT','AGREE','AHEAD','ALARM','ALBUM','ALERT','ALIEN','ALIGN','ALIKE','ALIVE',
+    'ALLEY','ALLOW','ALONE','ALONG','ALOUD','ALTER','ANGEL','ANGER','ANGLE','ANGRY',
+    'ANIME','ANKLE','ANNOY','APART','APPLE','APPLY','APRIL','ARISE','ARMOR','AROMA',
+    'AROSE','ARRAY','ARSON','ASKED','ASSET','ATLAS','ATTIC','AUDIO','AUDIT','AVOID',
+    'BAKER','BADGE','BASIC','BASIN','BATCH','BEARS','BEGAN','BEGIN','BEING','BELOW',
+    'BENCH','BILLY','BIRTH','BLACK','BLADE','BLAME','BLAND','BLAST','BLAZE','BLEED',
+    'BLEND','BLESS','BLIND','BLOCK','BLOOD','BLOOM','BLOWN','BOARD','BONUS','BOOST',
+    'BOOTH','BOTCH','BOUND','BOXER','BRACE','BRAIN','BRAVE','BREAK','BREED','BRICK',
+    'BRIDE','BRIEF','BRING','BRISK','BROAD','BROKE','BROWN','BUILT','BUNCH','BURST',
+    'CANDY','CARAT','CARDS','CARRY','CATCH','CAUSE','CEDAR','CHAIN','CHAIR','CHALK',
+    'CHAOS','CHARM','CHART','CHASE','CHEAP','CHECK','CHEEK','CHEER','CHESS','CHIEF',
+    'CHILL','CHINA','CHORD','CIVIL','CLAIM','CLAMP','CLASH','CLEAN','CLEAR','CLERK',
+    'CLICK','CLIFF','CLIMB','CLING','CLOSE','CLOTH','CLOUD','COACH','COAST','CORAL',
+    'COUNT','COVER','CRAMP','CRANE','CRASH','CRAZY','CREAM','CREEK','CRIME','CRIMP',
+    'CROSS','CROWD','CROWN','CRUSH','CRUST','CURVE','CYCLE','DAILY','DANCE','DATES',
+    'DEALT','DEATH','DECAY','DEFER','DELTA','DEMON','DENSE','DEPOT','DEPTH','DERBY',
+    'DESKS','DEVIL','DISCO','DODGE','DONOR','DOUBT','DOUGH','DRAIN','DRAMA','DRAWN',
+    'DREAM','DRESS','DRIFT','DRINK','DRIVE','DROVE','DROWN','DWARF','EAGLE','EARLY',
+    'EARTH','EIGHT','ELITE','EMAIL','ENEMY','ENJOY','ENTER','EQUAL','ERROR','EVENT',
+    'EVERY','EXACT','EXIST','EXTRA','FABLE','FAINT','FAITH','FANCY','FATAL','FAULT',
+    'FEAST','FENCE','FEVER','FIELD','FIFTH','FIGHT','FINAL','FIRST','FIXED','FLAME',
+    'FLASH','FLASK','FLINT','FLOAT','FLOOD','FLOOR','FLOUR','FOCUS','FORCE','FORGE',
+    'FORTH','FOUND','FRAME','FRANK','FRAUD','FRONT','FROST','FRUIT','FUNNY','GHOST',
+    'GIANT','GIVEN','GLAND','GLASS','GLOOM','GLORY','GLOVE','GOING','GRACE','GRADE',
+    'GRAIN','GRAND','GRANT','GRAPE','GRASP','GRASS','GRAVE','GREAT','GREEN','GRIEF',
+    'GRILL','GRIND','GROAN','GROSS','GROUP','GROVE','GROWN','GUARD','GUEST','GUIDE',
+    'GUILD','GUILE','GUILT','GUISE','GULCH','HABIT','HAPPY','HARSH','HASTE','HAVEN',
+    'HEART','HEAVY','HERBS','HINGE','HINTS','HORSE','HOTEL','HOUSE','HUMAN','HUMOR',
+    'HURRY','HYPER','IDEAL','IMAGE','IMPLY','INBOX','INDEX','INPUT','IVORY','ISSUE'
+  ];
+
+  let targetWord = '';
+  let currentRow = 0;
+  let currentCol = 0;
+  let guesses = [];
+  let gameOver = false;
+  let currentGuess = '';
+  let stats = { played: 0, wins: 0, streak: 0 };
+
+  function loadStats() {
+    try {
+      const s = localStorage.getItem('wz_stats');
+      if (s) stats = JSON.parse(s);
+    } catch(e) {}
+    document.getElementById('stat-played').textContent = stats.played;
+    document.getElementById('stat-wins').textContent = stats.wins;
+    document.getElementById('stat-streak').textContent = stats.streak;
+  }
+
+  function saveStats() {
+    try { localStorage.setItem('wz_stats', JSON.stringify(stats)); } catch(e) {}
+    document.getElementById('stat-played').textContent = stats.played;
+    document.getElementById('stat-wins').textContent = stats.wins;
+    document.getElementById('stat-streak').textContent = stats.streak;
+  }
+
+  function newGame() {
+    targetWord = WORDS[Math.floor(Math.random() * WORDS.length)];
+    currentRow = 0; currentCol = 0;
+    guesses = []; gameOver = false; currentGuess = '';
+    buildBoard();
+    buildKeyboard();
+    setMessage('');
+    document.querySelectorAll('.key').forEach(k => {
+      k.classList.remove('correct','present','absent');
+    });
+  }
+
+  function buildBoard() {
+    const board = document.getElementById('game-board');
+    board.innerHTML = '';
+    for (let r = 0; r < 6; r++) {
+      const row = document.createElement('div');
+      row.className = 'game-row';
+      row.id = 'row-' + r;
+      for (let c = 0; c < 5; c++) {
+        const tile = document.createElement('div');
+        tile.className = 'game-tile';
+        tile.id = `tile-${r}-${c}`;
+        row.appendChild(tile);
+      }
+      board.appendChild(row);
+    }
+  }
+
+  function buildKeyboard() {
+    const rows = [
+      ['Q','W','E','R','T','Y','U','I','O','P'],
+      ['A','S','D','F','G','H','J','K','L'],
+      ['ENTER','Z','X','C','V','B','N','M','⌫']
+    ];
+    const kb = document.getElementById('keyboard');
+    kb.innerHTML = '';
+    rows.forEach(row => {
+      const r = document.createElement('div');
+      r.className = 'keyboard-row';
+      row.forEach(k => {
+        const btn = document.createElement('button');
+        btn.className = 'key' + (k.length > 1 ? ' wide' : '');
+        btn.textContent = k;
+        btn.dataset.key = k;
+        btn.addEventListener('click', () => handleKey(k));
+        r.appendChild(btn);
+      });
+      kb.appendChild(r);
+    });
+  }
+
+  function handleKey(key) {
+    if (gameOver) return;
+    if (key === '⌫' || key === 'BACKSPACE') {
+      deleteLetter();
+    } else if (key === 'ENTER') {
+      submitGuess();
+    } else if (/^[A-Z]$/.test(key)) {
+      addLetter(key);
+    }
+  }
+
+  function addLetter(letter) {
+    if (currentGuess.length >= 5) return;
+    currentGuess += letter;
+    const tile = document.getElementById(`tile-${currentRow}-${currentGuess.length - 1}`);
+    tile.textContent = letter;
+    tile.classList.add('filled');
+  }
+
+  function deleteLetter() {
+    if (currentGuess.length === 0) return;
+    const tile = document.getElementById(`tile-${currentRow}-${currentGuess.length - 1}`);
+    tile.textContent = '';
+    tile.classList.remove('filled');
+    currentGuess = currentGuess.slice(0, -1);
+  }
+
+  function submitGuess() {
+    if (currentGuess.length !== 5) {
+      shakeRow(currentRow);
+      setMessage('Word must be 5 letters!');
+      setTimeout(() => setMessage(''), 1800);
+      return;
+    }
+    const guess = currentGuess;
+    const target = targetWord;
+    const result = evaluateGuess(guess, target);
+    revealRow(currentRow, guess, result);
+    guesses.push(guess);
+
+    const won = result.every(r => r === 'correct');
+    if (won) {
+      gameOver = true;
+      stats.played++; stats.wins++; stats.streak++;
+      saveStats();
+      setTimeout(() => {
+        setMessage('🎉 Brilliant! You got it!');
+        launchConfetti();
+      }, 1800);
+    } else if (currentRow === 5) {
+      gameOver = true;
+      stats.played++; stats.streak = 0;
+      saveStats();
+      setTimeout(() => setMessage(`The word was: ${target}`), 1800);
+    }
+    currentRow++;
+    currentGuess = '';
+  }
+
+  function evaluateGuess(guess, target) {
+    const result = Array(5).fill('absent');
+    const tArr = target.split('');
+    const gArr = guess.split('');
+    // First pass: correct
+    for (let i = 0; i < 5; i++) {
+      if (gArr[i] === tArr[i]) { result[i] = 'correct'; tArr[i] = null; gArr[i] = null; }
+    }
+    // Second pass: present
+    for (let i = 0; i < 5; i++) {
+      if (gArr[i] === null) continue;
+      const idx = tArr.indexOf(gArr[i]);
+      if (idx !== -1) { result[i] = 'present'; tArr[idx] = null; }
+    }
+    return result;
+  }
+
+  function revealRow(row, guess, result) {
+    for (let c = 0; c < 5; c++) {
+      const tile = document.getElementById(`tile-${row}-${c}`);
+      setTimeout(() => {
+        tile.classList.add(result[c]);
+        updateKey(guess[c], result[c]);
+      }, c * 300);
+    }
+  }
+
+  function updateKey(letter, status) {
+    const key = document.querySelector(`.key[data-key="${letter}"]`);
+    if (!key) return;
+    const priority = { correct: 3, present: 2, absent: 1 };
+    const current = key.classList.contains('correct') ? 3 : key.classList.contains('present') ? 2 : key.classList.contains('absent') ? 1 : 0;
+    if ((priority[status] || 0) > current) {
+      key.classList.remove('correct','present','absent');
+      key.classList.add(status);
+    }
+  }
+
+  function shakeRow(row) {
+    const r = document.getElementById('row-' + row);
+    r.querySelectorAll('.game-tile').forEach(t => t.classList.add('shake'));
+    setTimeout(() => r.querySelectorAll('.game-tile').forEach(t => t.classList.remove('shake')), 500);
+  }
+
+  function setMessage(msg) {
+    document.getElementById('game-message').textContent = msg;
+  }
+
+  function launchConfetti() {
+    const container = document.getElementById('confetti-container');
+    const colors = ['#6aaa64','#c9b458','#4f86f7','#f76f6f','#c084fc','#ffb347'];
+    for (let i = 0; i < 80; i++) {
+      const piece = document.createElement('div');
+      piece.className = 'confetti-piece';
+      piece.style.cssText = `
+        left: ${Math.random() * 100}%;
+        top: -10px;
+        background: ${colors[Math.floor(Math.random() * colors.length)]};
+        transform: rotate(${Math.random() * 360}deg);
+        animation-delay: ${Math.random() * 0.8}s;
+        animation-duration: ${1.5 + Math.random() * 1.5}s;
+        width: ${6 + Math.random() * 8}px;
+        height: ${6 + Math.random() * 8}px;
+        border-radius: ${Math.random() > 0.5 ? '50%' : '2px'};
+      `;
+      container.appendChild(piece);
+    }
+    setTimeout(() => { container.innerHTML = ''; }, 4000);
+  }
+
+  // Keyboard listener
+  document.addEventListener('keydown', e => {
+    if (e.ctrlKey || e.altKey || e.metaKey) return;
+    if (e.key === 'Backspace') handleKey('BACKSPACE');
+    else if (e.key === 'Enter') handleKey('ENTER');
+    else if (/^[a-zA-Z]$/.test(e.key)) handleKey(e.key.toUpperCase());
+  });
+
+  // Expose functions
+  window.newGame = newGame;
+  window.showHint = function() {
+    if (gameOver) return;
+    const revealed = new Set();
+    guesses.forEach(g => g.split('').forEach(l => revealed.add(l)));
+    const remaining = targetWord.split('').filter(l => !revealed.has(l));
+    if (remaining.length > 0) {
+      setMessage(`💡 Hint: The word contains "${remaining[0]}"`);
+      setTimeout(() => setMessage(''), 3000);
+    } else {
+      setMessage('💡 You already know all the letters!');
+      setTimeout(() => setMessage(''), 2000);
+    }
+  };
+  window.shareResult = function() {
+    const emojis = { correct: '🟩', present: '🟨', absent: '⬜' };
+    let text = `WordlePuzzle ${guesses.length}/6\n\n`;
+    guesses.forEach(g => {
+      const r = evaluateGuess(g, targetWord);
+      text += r.map(x => emojis[x]).join('') + '\n';
+    });
+    text += '\nhttps://wordlepuzzle.github.io/';
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(text).then(() => {
+        setMessage('📋 Results copied to clipboard!');
+        setTimeout(() => setMessage(''), 2500);
+      });
+    } else {
+      setMessage('📋 ' + text.replace(/\n/g, ' '));
+      setTimeout(() => setMessage(''), 3000);
+    }
+  };
+
+  // Init
+  loadStats();
+  newGame();
+})();
+</script>
+
+<!-- ===== FAQ TOGGLE ===== -->
+<script>
+function toggleFaq(el) {
+  const item = el.parentElement;
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+</script>
+
+<!-- ===== SCROLL ANIMATIONS ===== -->
+<script>
+(function() {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+})();
+</script>
+
+</body>
+</html>
